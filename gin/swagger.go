@@ -143,7 +143,7 @@ func CustomWrapHandler(config *Config, handler *webdav.Handler) gin.HandlerFunc 
 	index, _ := template.New("swagger_index.html").Parse(swaggerIndexTpl)
 
 	// var matcher = regexp.MustCompile(`(.*)(index\.html|doc\.json|favicon-16x16\.png|favicon-32x32\.png|/oauth2-redirect\.html|swagger-ui\.css|swagger-ui\.css\.map|swagger-ui\.js|swagger-ui\.js\.map|swagger-ui-bundle\.js|swagger-ui-bundle\.js\.map|swagger-ui-standalone-preset\.js|swagger-ui-standalone-preset\.js\.map)[?|.]*`)
-	var matcher = regexp.MustCompile(`(.*)(index\.html|doc\.json|\.png|\.gif|\.js|\.css|\.svg)[?|.]*`)
+	var matcher = regexp.MustCompile(`(.*)(index\.html|doc\.json|\.ico|\.png|\.gif|\.js|\.css|\.svg)[?|.]*`)
 
 	return func(ctx *gin.Context) {
 		if ctx.Request.Method != http.MethodGet {
@@ -184,6 +184,8 @@ func CustomWrapHandler(config *Config, handler *webdav.Handler) gin.HandlerFunc 
 			ctx.Header("Content-Type", "application/javascript")
 		case ".png":
 			ctx.Header("Content-Type", "image/png")
+		case ".ico":
+			ctx.Header("Content-Type", "image/x-icon")
 		case ".json":
 			ctx.Header("Content-Type", "application/json; charset=utf-8")
 		}
@@ -235,7 +237,7 @@ const swaggerIndexTpl = `<!-- HTML for static distribution bundle build -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <title></title>
     <link href="./chunk-0b510f4b.a9ffbfcb.css" rel="prefetch">
     <link href="./chunk-845d989c.20e6d994.css" rel="prefetch">
