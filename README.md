@@ -1,32 +1,46 @@
 # knife4go
 simply Assembled knife4j + gin-swagger, it means an enhanced version of gin-swagger with nice UI.  
 
-work well on go1.18+
+work well on go1.21+
 
 # go get
-`go get github.com/go-webtools/knife4go`
+`go get github.com/jasonlabz/knife4go`
 
 ## usage
 Based on the usage of gin-swagger, add sth as follows:
+- openapi 2.0
 ```go
 import (
-	knife4goGin "github.com/go-webtools/knife4go/gin"
-	knife4goFiles "github.com/go-webtools/knife4go"
+    knife4goFiles "github.com/jasonlabz/knife4go"
+    knife4goGin "github.com/jasonlabz/knife4go/gin"
+    _ "github.com/.../docs"
     ...
-	swaggerFiles "github.com/swaggo/files"     // swagger embed files
-	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
 )
 
 func InitRouters() *gin.Engine {
-    	router := gin.Default()
+	router := gin.Default()
 	// swagger base router
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	// knife4go: beautify swagger-ui
-	router.GET("/knife4go/*any", knife4goGin.WrapHandler(knife4goFiles.Handler))
+    router.GET("/swagger/*any", knife4goGin.WrapHandler(knife4goFiles.Handler))
     ...
 }
 ```
 
+- openapi 3.0
+```go
+import (
+    knife4go "github.com/jasonlabz/knife4go"
+    _ "github.com/.../docs"
+    ...
+)
+
+func InitRouters() *gin.Engine {
+	// swagger base router
+	// knife4go: beautify swagger-ui
+	_ = knife4go.InitSwaggerKnife(serverGroup)
+    ...
+}
+```
 ## Disclaimer
 Public welfare projects.  
 The disclaimer asserts that the individual won't be held responsible for any.
