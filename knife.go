@@ -82,8 +82,6 @@ func InitSwaggerKnife(router gin.IRouter, opts ...Opts) error {
 
 	css.AddRouterOfAppAc23e017Css(router)
 
-	css.AddRouterOfAppAc23e017CssGz(router)
-
 	css.AddRouterOfChunk75464e7e8fb93ba5Css(router)
 
 	css.AddRouterOfChunkD7d5f59cA9ffbfcbCss(router)
@@ -118,27 +116,17 @@ func InitSwaggerKnife(router gin.IRouter, opts ...Opts) error {
 
 	js.AddRouterOfApp2fab4ac5Js(router)
 
-	js.AddRouterOfApp2fab4ac5JsGz(router)
-
 	js.AddRouterOfChunk069eb4372cfebf27Js(router)
 
 	js.AddRouterOfChunk069eb4372cfebf27JsLICENSETxt(router)
 
-	js.AddRouterOfChunk069eb4372cfebf27JsGz(router)
-
 	js.AddRouterOfChunk0d102d5aB2bddffcJs(router)
 
-	js.AddRouterOfChunk0d102d5aB2bddffcJsGz(router)
-
 	js.AddRouterOfChunk0fd67716D57e2c41Js(router)
-
-	js.AddRouterOfChunk0fd67716D57e2c41JsGz(router)
 
 	js.AddRouterOfChunk260d712a390177feJs(router)
 
 	js.AddRouterOfChunk260d712a390177feJsLICENSETxt(router)
-
-	js.AddRouterOfChunk260d712a390177feJsGz(router)
 
 	js.AddRouterOfChunk2d0af44e392afcd6Js(router)
 
@@ -148,43 +136,27 @@ func InitSwaggerKnife(router gin.IRouter, opts ...Opts) error {
 
 	js.AddRouterOfChunk3b888a658737ce4fJs(router)
 
-	js.AddRouterOfChunk3b888a658737ce4fJsGz(router)
-
 	js.AddRouterOfChunk3ec4aaa8A79d19f8Js(router)
-
-	js.AddRouterOfChunk3ec4aaa8A79d19f8JsGz(router)
 
 	js.AddRouterOfChunk589faee05bfd1708Js(router)
 
 	js.AddRouterOfChunk589faee05bfd1708JsLICENSETxt(router)
 
-	js.AddRouterOfChunk589faee05bfd1708JsGz(router)
-
 	js.AddRouterOfChunk735c675c5b409314Js(router)
 
-	js.AddRouterOfChunk735c675c5b409314JsGz(router)
-
 	js.AddRouterOfChunk75464e7eB130271bJs(router)
-
-	js.AddRouterOfChunk75464e7eB130271bJsGz(router)
 
 	js.AddRouterOfChunkAdb9e9442c7f24feJs(router)
 
 	js.AddRouterOfChunkAdb9e9442c7f24feJsLICENSETxt(router)
 
-	js.AddRouterOfChunkAdb9e9442c7f24feJsGz(router)
-
 	js.AddRouterOfChunkD7d5f59cE61130f3Js(router)
 
 	js.AddRouterOfChunkD7d5f59cE61130f3JsLICENSETxt(router)
 
-	js.AddRouterOfChunkD7d5f59cE61130f3JsGz(router)
-
 	js.AddRouterOfChunkVendorsD51cf6f8Js(router)
 
 	js.AddRouterOfChunkVendorsD51cf6f8JsLICENSETxt(router)
-
-	js.AddRouterOfChunkVendorsD51cf6f8JsGz(router)
 
 	oauth.AddRouterOfAxiosMinJs(router)
 
