@@ -72,6 +72,8 @@ func InitSwaggerKnife(router gin.IRouter, opts ...Opts) error {
 
 	icons.AddRouterOfFavicon32x32Png(router)
 
+	icons.AddRouterOfFaviconICO(router)
+
 	icons.AddRouterOfMsapplicationIcon144x144Png(router)
 
 	icons.AddRouterOfMstile150x150Png(router)
